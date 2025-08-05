@@ -1,0 +1,191 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* Algerian Domino Premium 3D Color System */
+  --deep-purple: #3B0855;
+  --purple-magenta: #852467;
+  --coral-pink: #FD8083;
+  --hot-pink: #EE227D;
+  --teal-blue: #498099;
+  --mint-green: #30C087;
+  
+  /* Supporting Colors */
+  --neon-white: #FFFFFF;
+  --dark-void: #0A0A0A;
+  --glass-white: #F8FAFC;
+  --shadow-dark: #1A1A2E;
+  --accent-glow: #FF6B9D;
+  
+  /* Enhanced Background Gradients */
+  --neon-day-start: #F8FAFC;
+  --neon-day-end: #E2E8F0;
+  --neon-night-start: #0A0A0A;
+  --neon-night-end: #1A1A2E;
+  
+  /* Game Specific - Neon Enhanced */
+  --felt-texture: #3B0855;
+  --domino-face: #FFFFFF;
+  --domino-dots: #0A0A0A;
+  --wood-texture: #852467;
+  --neon-table: #498099;
+  
+  /* Simplified Effects */
+  --glass-bg: rgba(248, 250, 252, 0.08);
+  --glass-border: rgba(238, 34, 125, 0.15);
+  --glass-shadow: 0 12px 40px rgba(59, 8, 85, 0.2);
+  --neon-glow: 0 0 30px rgba(238, 34, 125, 0.6);
+  --depth-1: 0 2px 4px rgba(26, 26, 46, 0.15), 0 1px 2px rgba(59, 8, 85, 0.1);
+  --depth-2: 0 4px 8px rgba(26, 26, 46, 0.18), 0 2px 4px rgba(59, 8, 85, 0.12);
+  --depth-3: 0 8px 16px rgba(26, 26, 46, 0.22), 0 4px 8px rgba(59, 8, 85, 0.15);
+  --depth-4: 0 16px 32px rgba(26, 26, 46, 0.25), 0 8px 16px rgba(59, 8, 85, 0.18);
+  
+  --background: var(--neon-day-start);
+  --foreground: var(--deep-purple);
+  --card: var(--neon-white);
+  --card-foreground: var(--deep-purple);
+  --popover: var(--neon-white);
+  --popover-foreground: var(--deep-purple);
+  --primary: var(--hot-pink);
+  --primary-foreground: var(--neon-white);
+  --secondary: var(--teal-blue);
+  --secondary-foreground: var(--neon-white);
+  --muted: var(--glass-white);
+  --muted-foreground: var(--purple-magenta);
+  --accent: var(--coral-pink);
+  --accent-foreground: var(--deep-purple);
+  --destructive: var(--hot-pink);
+  --destructive-foreground: var(--neon-white);
+  --border: rgba(133, 36, 103, 0.2);
+  --input: transparent;
+  --ring: var(--hot-pink);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  
+  /* Algerian Domino Neon Colors */
+  --color-deep-purple: var(--deep-purple);
+  --color-purple-magenta: var(--purple-magenta);
+  --color-coral-pink: var(--coral-pink);
+  --color-hot-pink: var(--hot-pink);
+  --color-teal-blue: var(--teal-blue);
+  --color-mint-green: var(--mint-green);
+  --color-neon-white: var(--neon-white);
+}
+
+/* Algerian Domino Neon Color Classes */
+@layer utilities {
+  .bg-deep-purple { background-color: var(--deep-purple); }
+  .bg-purple-magenta { background-color: var(--purple-magenta); }
+  .bg-coral-pink { background-color: var(--coral-pink); }
+  .bg-hot-pink { background-color: var(--hot-pink); }
+  .bg-teal-blue { background-color: var(--teal-blue); }
+  .bg-mint-green { background-color: var(--mint-green); }
+  .bg-neon-white { background-color: var(--neon-white); }
+  
+  .text-deep-purple { color: var(--deep-purple); }
+  .text-purple-magenta { color: var(--purple-magenta); }
+  .text-coral-pink { color: var(--coral-pink); }
+  .text-hot-pink { color: var(--hot-pink); }
+  .text-teal-blue { color: var(--teal-blue); }
+  .text-mint-green { color: var(--mint-green); }
+  .text-neon-white { color: var(--neon-white); }
+  
+  .border-deep-purple { border-color: var(--deep-purple); }
+  .border-purple-magenta { border-color: var(--purple-magenta); }
+  .border-coral-pink { border-color: var(--coral-pink); }
+  .border-hot-pink { border-color: var(--hot-pink); }
+  .border-teal-blue { border-color: var(--teal-blue); }
+  .border-mint-green { border-color: var(--mint-green); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, var(--neon-day-start) 0%, var(--neon-day-end) 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Essential Effects */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-strong {
+    background: rgba(59, 8, 85, 0.12);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(238, 34, 125, 0.25);
+    box-shadow: 0 8px 32px rgba(59, 8, 85, 0.3);
+  }
+
+  .glass-neon {
+    background: rgba(238, 34, 125, 0.08);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(238, 34, 125, 0.3);
+    box-shadow: 0 16px 48px rgba(59, 8, 85, 0.4);
+  }
+
+  .depth-1 { box-shadow: var(--depth-1); }
+  .depth-2 { box-shadow: var(--depth-2); }
+  .depth-3 { box-shadow: var(--depth-3); }
+  .depth-4 { box-shadow: var(--depth-4); }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(238, 34, 125, 0.6);
+  }
+
+  .btn-3d {
+    transform: translateY(0);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(59, 8, 85, 0.3);
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(59, 8, 85, 0.4);
+  }
+
+  .felt-pattern {
+    background: var(--felt-texture);
+    background-image: radial-gradient(circle at 25% 25%, rgba(238, 34, 125, 0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
